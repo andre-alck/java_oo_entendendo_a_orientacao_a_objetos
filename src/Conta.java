@@ -3,4 +3,29 @@ class Conta {
 	int agencia = 123;
 	int numero;
 	String titular;
+
+	void deposita(double valor) {
+		this.saldo += valor;
+	}
+
+	boolean saca(double valor) {
+		if (this.saldo >= valor) {
+			this.saldo -= valor;
+
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean transfere(double valor, Conta destino) {
+		if (this.saldo >= valor) {
+			destino.deposita(valor);
+			this.saldo -= valor;
+
+			return true;
+		}
+
+		return false;
+	}
 }
