@@ -15,5 +15,8 @@ public class TestaMetodo {
             System.out.println("Falta de dinheiro");
         }
 
+        contaDoAndre.titular = "andre carvalho";
+        System.out.println(contaDoAndre.titular);
+
     }
 }
