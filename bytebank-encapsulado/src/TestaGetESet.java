@@ -1,6 +1,6 @@
 public class TestaGetESet {
     public static void main(String[] args) {
-        Conta conta = new Conta();
+        Conta conta = new Conta(1, 1);
 
         conta.setTitular(new Cliente());
 
@@ -8,7 +8,7 @@ public class TestaGetESet {
         conta.getTitular().setCpf("928.432.567-98");
         conta.getTitular().setProfissao("Estagiário de TI");
 
-        Conta contaDoAndre = new Conta();
+        Conta contaDoAndre = new Conta(1, 1);
         contaDoAndre.setTitular(conta.getTitular()); // ou seja, o titular da conta contaDoAndre é o mesmo titular conta
                                                      // conta
 
